@@ -1,0 +1,12 @@
+Django==5.2.4
+celery==5.5.3
+redis==6.2.0
+django-celery-beat==2.8.1
+django-celery-results==2.6.0
+python-dotenv==1.1.1
+djangorestframework==3.16.0
+django-cors-headers==4.7.0
+mypy==1.17.0
+django-stubs==5.2.2
+types-redis==4.6.0.20241004
+pytz==2025.2 

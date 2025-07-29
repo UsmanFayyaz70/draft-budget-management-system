@@ -1,0 +1,1 @@
+# Campaigns app for budget management system 
