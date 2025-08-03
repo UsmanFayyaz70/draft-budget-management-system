@@ -102,12 +102,15 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Celery Configuration
-CELERY_BROKER_URL = os.environ.get('REDIS_URL', 'redis://localhost:6379/0')
+CELERY_BROKER_URL = 'memory://'  # Use in-memory broker for development
 CELERY_RESULT_BACKEND = 'django-db'
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TIMEZONE = TIME_ZONE
+CELERY_TASK_ALWAYS_EAGER = True  # Execute tasks synchronously for development
+CELERY_WORKER_CONCURRENCY = 1  # Single worker for development
+CELERY_TASK_EAGER_PROPAGATES = True
 
 # Celery Beat Schedule
 CELERY_BEAT_SCHEDULE = {

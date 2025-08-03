@@ -28,7 +28,7 @@ def test_basic_functionality():
     # Create test data
     print("1. Creating test brands...")
     brand1 = BrandService.create_brand(
-        name="Test Brand 1",
+        name="Test Brand 3",
         daily_budget=Decimal('100.00'),
         monthly_budget=Decimal('2000.00')
     )
